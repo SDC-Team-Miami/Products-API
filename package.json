@@ -1,0 +1,33 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "Backend service for Products",
+  "main": "server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDC-Team-Miami/Products-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SDC-Team-Miami/Products-API/issues"
+  },
+  "homepage": "https://github.com/SDC-Team-Miami/Products-API#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "pg": "^8.7.3",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "morgan": "^1.10.0"
+  }
+}
