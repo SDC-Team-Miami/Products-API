@@ -4,11 +4,13 @@
 const { Sequelize } = require('sequelize');
 // Op
 
-const sequelize = new Sequelize(process.env.URI);
+const sequelize = new Sequelize(process.env.URI,
+  // { logging: false }
+);
 
 const auth = async () => {
   try {
-    await sequelize.authenticate();
+    await sequelize.authenticate()
   } catch (error) {
     console.error('Cannot connect to DB', error);
   }
@@ -79,7 +81,7 @@ const getStyles = async (product_id) => {
 
   let photoPromises = styles.results.map((style) => {
     return getPhotos(style.style_id);
-  })
+  });
 
   return Promise.all(photoPromises)
     .then((result) => {

@@ -20,14 +20,14 @@ app.get('/', (req, res) => {
 app.get('/products:product_id', (req, res) => {
   getProducts(req.params.product_id.slice(1))
     .then((result) => {
-      res.send(result);
+      res.status(200).send(result);
     })
 });
 
 app.get('/products:product_id/styles', (req, res) => {
   getStyles(req.params.product_id.slice(1))
     .then((result) => {
-      res.send(result);
+      res.status(200).send(result);
     })
     .catch((err) => {
       console.log('Error getting styles', err);
@@ -37,7 +37,7 @@ app.get('/products:product_id/styles', (req, res) => {
 app.get('/products:product_id/related', (req, res) => {
   getRelated(req.params.product_id.slice(1))
     .then((result) => {
-      res.send(result);
+      res.status(200).send(result);
     })
 });
 
